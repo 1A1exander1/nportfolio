@@ -50,3 +50,9 @@ new SimpleBar(document.getElementById('myEl1'),{
    
     scrollbarMaxSize: 50
 });
+
+$(".menu li ul").hide(); // скрываем выпадающее меню
+$(".menu li:has('.hover')").hover(
+  function(){
+  $(".menu li ul").stop().fadeToggle(300);} /* отбираем элемент списка, который содержит элемент с классом .submenu и добавляем ему функцию при наведении, которая показывает и скрывает выпадающее меню */
+);

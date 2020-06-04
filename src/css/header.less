@@ -15,7 +15,10 @@ header{
         .nav{
             .col();
             .size(9);
-          
+            .md-block({
+                display: none
+            });
+           
             display: flex;
             flex-wrap: wrap;
             align-self: center;         
@@ -39,6 +42,66 @@ header{
                 background: #8583e1;
             }
             
+        }
+        .menu{
+           
+          display: none;
+          .md-block({
+              display: block;
+              position: absolute;
+              left: 95%;
+              
+            
+            
+          });
+            .active{
+               color: #7a798c;
+               text-transform: uppercase;
+               font-size: 16px;
+               font-family: @font;
+               font-weight: 700;
+               position: relative;
+               right: 15px;
+               bottom: 20px;
+                .hover{
+                    display: none;
+                    position: relative;
+                    bottom: 10px;
+                    margin-right: 3px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #100f3a;
+                    font-family: @font;
+                    background: #fff;
+                    height: 410px;
+                    
+                    width: 250px;
+                    padding: 0;
+                    
+                    z-index: 1;
+                    line-height: 30px;
+                    .md-block({
+                        display: block;
+                        position: relative;
+                        right: 215px;
+                        bottom: 88px;
+                        text-align: right;
+                        padding-right: 33px;
+                        padding-top: 20px;
+
+                        a{
+                            text-decoration: none;
+                        }
+                        
+                      
+                    });
+                }
+                .hover:hover{
+                    display: block;
+                   
+                }
+            }
         }
     }
 }
