@@ -1,0 +1,44 @@
+header{
+    .menu{
+        .row-flex();
+        
+        padding-top: 35px;
+        padding-left: 10px;
+        .logo{
+            .col();
+            .size(3);
+            width: 182px;
+            align-self: center;
+            
+            
+        }
+        .nav{
+            .col();
+            .size(9);
+          
+            display: flex;
+            flex-wrap: wrap;
+            align-self: center;         
+            justify-content: space-evenly;  
+            background: #100f3a; 
+            width: 972px;
+            
+            .item{
+                
+                padding: 26px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: @font;
+                    
+                    
+                }
+            }
+          
+            .item:hover{
+                background: #8583e1;
+            }
+            
+        }
+    }
+}
