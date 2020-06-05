@@ -12,7 +12,7 @@ module.exports = {
             fields: "15px"
         },
         sm: {
-            width: "920pxpx"
+            width: "920px"
         },
         xs: {
             width: "720px"
