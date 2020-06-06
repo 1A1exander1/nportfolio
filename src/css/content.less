@@ -238,11 +238,12 @@
             
             .button{
                 width: 100%;
+                
                 .md-block({
                     
                     position: relative;
-                    right: 49%;
-                    top: 70%;
+                    right: 385px;
+                    top: 340px;
 
                     width: 320px;
                   
@@ -251,13 +252,19 @@
                 });
                 .sm-block({
                     position: absolute;
-                    top: 60%;
-                    right: 60%;
+                    left: 0px;
+                    top: 400px;
                 });
                 .xs-block({
                   
-                    right: 45%;
+                    position: absolute;
+                    left: 35px;
+                    
                 });
+                .xxs-block({
+                   top: 425px
+                    
+                  });
                 
                 
                 height: 90px;
@@ -279,10 +286,19 @@
                     &__text{
                         background: #8583e1; 
                         padding:22px;
+                        .sm-block({
+                           padding: 16px;
+                           
+                        });
                         p{
                             color: #fff;
                             font-family: @font;
                             font-size: 14px;
+                            .sm-block({
+                                font-size: 15px;
+                                font-weight: 600;
+                                margin-top: 2px;
+                             });
                         }
                     }
                     &__arrow{
@@ -314,6 +330,11 @@
                     margin-top: 50px;
                     
                 });
+                .xxs-block({
+                   
+                    margin-top: 80px;
+                    
+                });
                 
                 
                }
@@ -335,6 +356,11 @@
                     margin-top: 30px;
                     
                 });
+                .xxs-block({
+                    font-size: 50px;
+                    margin-top: 60px;
+                    
+                });
                }
             }
             .scrollContent{
@@ -353,7 +379,11 @@
                     position: relative;
                     top: 130px;
                    
-                    height: 350px;
+                    height: 330px;
+                });
+                .xs-block({
+                    height: 280px;
+                    
                 });
                
                 width: 90%;
@@ -373,6 +403,7 @@
                         
                        margin-left: 8%;
                     });  
+                    
                 }
                 p{
                     font-family: @font;
@@ -402,6 +433,12 @@
                      margin: 0 auto
                      
                     });  
+                    .xxs-block({
+                     
+                       display: block;
+                     
+                        
+                       });  
                    
                    .block{
                        width: 437px;
@@ -410,6 +447,13 @@
                         width: 300px;
                         margin: 0 auto;
                        });  
+                       .xxs-block({
+                     
+                        
+                        margin-left: 70px;
+                      
+                         
+                        });  
                       
                        
                    
@@ -480,10 +524,6 @@
         }
     }
 }
-#myEl1{
-    .sm-block({
-                     
-    });
-}
+
 
 

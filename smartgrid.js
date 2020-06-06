@@ -3,7 +3,8 @@ module.exports = {
 	offset: "30px",
 	
 	container: {
-        maxWidth: "1521",
+        maxWidth: "1521px",
+        minWidth: "500px",  
         fields: "30px"
     },
 	breakPoints: {
@@ -15,10 +16,14 @@ module.exports = {
             width: "920px"
         },
         xs: {
-            width: "720px"
+            width: "760px"
         },
         xxs: {
-            width: "576px",
+            width: "576px"
+           
+        },
+        xxss: {
+            width: "432px",
            
         }
 	},

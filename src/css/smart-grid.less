@@ -3,20 +3,23 @@
 
 @break_md: 1255px;
 @break_sm: 920px;
-@break_xs: 720px;
+@break_xs: 760px;
 @break_xxs: 576px;
+@break_xxss: 432px;
 
 @offset: 30px;
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
 @offset_xxs: @offset;
+@offset_xxss: @offset;
 
 @offset_one_side: (@offset / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 @offset_xxs_one_side: (@offset_xxs / 2);
+@offset_xxss_one_side: (@offset_xxss / 2);
 
 @fields: 30px;
 @fields_md: 15px;
@@ -42,7 +45,7 @@
 }
 
 .wrapper(){
-    max-width: 1521;
+    max-width: 1521px;
     margin: 0 auto;
     .wrapper-full();
 }
@@ -105,6 +108,11 @@
 .size-xxs(@n){
     @val: 100% / @columns * @n;
     .xxs(width, ~"calc(@{val} - @{offset_xxs})");
+}
+
+.size-xxss(@n){
+    @val: 100% / @columns * @n;
+    .xxss(width, ~"calc(@{val} - @{offset_xxss})");
 }
 
 .shift(@n){
@@ -267,6 +275,38 @@
     .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
 }
 
+.shift-xxss(@n){
+    @val: 100% / @columns * @n;
+    .xxss(margin-left, ~"calc(@{val} + @{offset_xxss_one_side})");
+    .xxss(margin-right, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
+.shift-xxss-left(@n){
+    @val: 100% / @columns * @n;
+    .xxss(margin-left, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
+.shift-xxss-right(@n){
+    @val: 100% / @columns * @n;
+    .xxss(margin-right, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
+.shift-xxss-padding(@n){
+    @val: 100% / @columns * @n;
+    .xxss(padding-left, ~"calc(@{val} + @{offset_xxss_one_side})");
+    .xxss(padding-right, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
+.shift-xxss-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xxss(padding-left, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
+.shift-xxss-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xxss(padding-right, ~"calc(@{val} + @{offset_xxss_one_side})");
+}
+
 .md(@name, @value){
     @media screen and (max-width: @break_md){
         @{name}: @value;
@@ -311,6 +351,18 @@
 
 .xxs-block(@content){
     @media screen and (max-width: @break_xxs){
+        @content();
+    }
+}
+
+.xxss(@name, @value){
+    @media screen and (max-width: @break_xxss){
+        @{name}: @value;
+    }
+}
+
+.xxss-block(@content){
+    @media screen and (max-width: @break_xxss){
         @content();
     }
 }
