@@ -12,20 +12,29 @@ module.exports = {
             width: "1255px",
             fields: "15px"
         },
+        ipad: {
+            width: "1024px",
+            fields: "15px"
+        },
         sm: {
             width: "920px"
         },
         xs: {
-            width: "760px"
+            width: "768px"
         },
         xxs: {
             width: "576px"
            
         },
         xxss: {
-            width: "432px",
+            width: "414px",
+           
+        },
+        extra: {
+            width: "375px",
            
         }
+
 	},
 
 };

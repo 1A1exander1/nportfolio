@@ -2,27 +2,34 @@
 @atom: (100% / @columns);
 
 @break_md: 1255px;
+@break_ipad: 1024px;
 @break_sm: 920px;
-@break_xs: 760px;
+@break_xs: 768px;
 @break_xxs: 576px;
-@break_xxss: 432px;
+@break_xxss: 414px;
+@break_extra: 375px;
 
 @offset: 30px;
 @offset_md: @offset;
+@offset_ipad: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
 @offset_xxs: @offset;
 @offset_xxss: @offset;
+@offset_extra: @offset;
 
 @offset_one_side: (@offset / 2);
 @offset_md_one_side: (@offset_md / 2);
+@offset_ipad_one_side: (@offset_ipad / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 @offset_xxs_one_side: (@offset_xxs / 2);
 @offset_xxss_one_side: (@offset_xxss / 2);
+@offset_extra_one_side: (@offset_extra / 2);
 
 @fields: 30px;
 @fields_md: 15px;
+@fields_ipad: 15px;
 
 .wrapper-full(){
     padding-left: @fields;
@@ -31,6 +38,11 @@
     .md-block({
         padding-left: @fields_md;
         padding-right: @fields_md;
+    });
+
+    .ipad-block({
+        padding-left: @fields_ipad;
+        padding-right: @fields_ipad;
     });
 }
 
@@ -95,6 +107,11 @@
     .md(width, ~"calc(@{val} - @{offset_md})");
 }
 
+.size-ipad(@n){
+    @val: 100% / @columns * @n;
+    .ipad(width, ~"calc(@{val} - @{offset_ipad})");
+}
+
 .size-sm(@n){
     @val: 100% / @columns * @n;
     .sm(width, ~"calc(@{val} - @{offset_sm})");
@@ -113,6 +130,11 @@
 .size-xxss(@n){
     @val: 100% / @columns * @n;
     .xxss(width, ~"calc(@{val} - @{offset_xxss})");
+}
+
+.size-extra(@n){
+    @val: 100% / @columns * @n;
+    .extra(width, ~"calc(@{val} - @{offset_extra})");
 }
 
 .shift(@n){
@@ -177,6 +199,38 @@
 .shift-md-padding-right(@n){
     @val: 100% / @columns * @n;
     .md(padding-right, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-ipad(@n){
+    @val: 100% / @columns * @n;
+    .ipad(margin-left, ~"calc(@{val} + @{offset_ipad_one_side})");
+    .ipad(margin-right, ~"calc(@{val} + @{offset_ipad_one_side})");
+}
+
+.shift-ipad-left(@n){
+    @val: 100% / @columns * @n;
+    .ipad(margin-left, ~"calc(@{val} + @{offset_ipad_one_side})");
+}
+
+.shift-ipad-right(@n){
+    @val: 100% / @columns * @n;
+    .ipad(margin-right, ~"calc(@{val} + @{offset_ipad_one_side})");
+}
+
+.shift-ipad-padding(@n){
+    @val: 100% / @columns * @n;
+    .ipad(padding-left, ~"calc(@{val} + @{offset_ipad_one_side})");
+    .ipad(padding-right, ~"calc(@{val} + @{offset_ipad_one_side})");
+}
+
+.shift-ipad-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .ipad(padding-left, ~"calc(@{val} + @{offset_ipad_one_side})");
+}
+
+.shift-ipad-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .ipad(padding-right, ~"calc(@{val} + @{offset_ipad_one_side})");
 }
 
 .shift-sm(@n){
@@ -307,6 +361,38 @@
     .xxss(padding-right, ~"calc(@{val} + @{offset_xxss_one_side})");
 }
 
+.shift-extra(@n){
+    @val: 100% / @columns * @n;
+    .extra(margin-left, ~"calc(@{val} + @{offset_extra_one_side})");
+    .extra(margin-right, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
+.shift-extra-left(@n){
+    @val: 100% / @columns * @n;
+    .extra(margin-left, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
+.shift-extra-right(@n){
+    @val: 100% / @columns * @n;
+    .extra(margin-right, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
+.shift-extra-padding(@n){
+    @val: 100% / @columns * @n;
+    .extra(padding-left, ~"calc(@{val} + @{offset_extra_one_side})");
+    .extra(padding-right, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
+.shift-extra-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .extra(padding-left, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
+.shift-extra-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .extra(padding-right, ~"calc(@{val} + @{offset_extra_one_side})");
+}
+
 .md(@name, @value){
     @media screen and (max-width: @break_md){
         @{name}: @value;
@@ -315,6 +401,18 @@
 
 .md-block(@content){
     @media screen and (max-width: @break_md){
+        @content();
+    }
+}
+
+.ipad(@name, @value){
+    @media screen and (max-width: @break_ipad){
+        @{name}: @value;
+    }
+}
+
+.ipad-block(@content){
+    @media screen and (max-width: @break_ipad){
         @content();
     }
 }
@@ -363,6 +461,18 @@
 
 .xxss-block(@content){
     @media screen and (max-width: @break_xxss){
+        @content();
+    }
+}
+
+.extra(@name, @value){
+    @media screen and (max-width: @break_extra){
+        @{name}: @value;
+    }
+}
+
+.extra-block(@content){
+    @media screen and (max-width: @break_extra){
         @content();
     }
 }

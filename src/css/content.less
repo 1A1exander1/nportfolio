@@ -8,6 +8,10 @@
         .sm-block({
             height: 100%;
         });
+        .ipad-block({
+            height: 100%;
+
+        });
         .xs-block({
             margin: 0;
            
@@ -19,8 +23,14 @@
             .col();
             .size(4);
             .size-sm(12);
+            .size-ipad(12);
             .size-xs(12);
             .sm-block({
+                background: #100f3a;
+                margin: 0;
+                width: 100%
+            });
+            .ipad-block({
                 background: #100f3a;
                 margin: 0;
                 width: 100%
@@ -35,6 +45,11 @@
                 .sm-block({
                     margin: 0;
                     
+                    background-repeat: no-repeat
+                });
+                .ipad-block({
+                    margin: 0;
+                    width: 100%;
                     background-repeat: no-repeat
                 });
                 .xs-block({
@@ -56,6 +71,7 @@
                 justify-content: center;
                 .col();
                 .size-sm(6);
+                .size-ipad(6);
                 .size-xs(12);
                img{
                    
@@ -71,11 +87,18 @@
             .infa{
                 .col();
                 .size-sm(6);
+                .size-ipad(6);
                 .size-xs(12);
                 .sm-block({
                     margin: 0;
                     position: relative;
                     left: 10px;
+                    
+                });
+                .ipad-block({
+                    margin: 0;
+                    position: relative;
+                    left: 20px;
                     
                 });
                 .xs-block({
@@ -97,9 +120,7 @@
                  });
 
                 .textskroll{
-                    .sm-block({
-                     
-                    });
+                   
                    .md-block({
                     overflow:  hidden;
                     height: 400px;
@@ -128,6 +149,12 @@
                     height:100px;
                     
                     .information{
+                        .ipad-block({
+                            margin: 0;
+                            position: relative;
+                            left: 20px;
+                            
+                        });
                         .md-block({
                           margin: 0 auto;
                           
@@ -233,6 +260,7 @@
             .col();
             .size(8);
             .size-sm(12);
+            .size-ipad(12);
             .size-xs(12);
             
             
@@ -253,6 +281,11 @@
                 .sm-block({
                     position: absolute;
                     left: 0px;
+                    top: 400px;
+                });
+                .ipad-block({
+                    position: absolute;
+                    left: 40px;
                     top: 400px;
                 });
                 .xs-block({
@@ -330,6 +363,13 @@
                     margin-top: 50px;
                     
                 });
+                .ipad-block({
+                    
+                    line-height: 1.35;
+                    text-align: center;
+                    margin-top: 25px;
+                    
+                });
                 .xxs-block({
                    
                     margin-top: 80px;
@@ -356,6 +396,13 @@
                     margin-top: 30px;
                     
                 });
+                .ipad-block({
+                    font-size: 56px;
+                    line-height: 1.35;
+                    text-align: center;
+                    margin-top: 40px;
+                    
+                });
                 .xxs-block({
                     font-size: 50px;
                     margin-top: 60px;
@@ -380,6 +427,13 @@
                     top: 130px;
                    
                     height: 330px;
+                });
+                .ipad-block({
+                   
+                    position: relative;
+                    top: 30px;
+                   
+                    height: 250px;
                 });
                 .xs-block({
                     height: 280px;
