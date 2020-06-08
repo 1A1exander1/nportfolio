@@ -9,11 +9,11 @@ module.exports = {
     },
 	breakPoints: {
 		md: {
-            width: "1255px",
+            width: "1271px",
             fields: "15px"
         },
         ipad: {
-            width: "1024px",
+            width: "1207px",
             fields: "15px"
         },
         sm: {
