@@ -59,7 +59,8 @@
                    
                     width: 100%;
                     
-                    
+                    border: 5px solid #8583e1;
+                    border-radius: 10px;
                     margin: 0 auto;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -79,6 +80,9 @@
                    height: 420px;
                    position: relative;
                    top: 54px;
+                   .xs-block({
+                       top:44px;
+                   });
                    
                }
               
@@ -295,7 +299,12 @@
                     
                 });
                 .xxs-block({
-                   top: 425px
+                   top: 390px
+                    
+                  });
+                  .extra-block({
+                  top:380px;
+                    
                     
                   });
                 
@@ -319,19 +328,23 @@
                     &__text{
                         background: #8583e1; 
                         padding:22px;
+
                         .sm-block({
                            padding: 16px;
                            
                         });
+                       
                         p{
                             color: #fff;
                             font-family: @font;
                             font-size: 14px;
+
                             .sm-block({
                                 font-size: 15px;
                                 font-weight: 600;
                                 margin-top: 2px;
                              });
+                         
                         }
                     }
                     &__arrow{

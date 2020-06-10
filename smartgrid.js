@@ -16,6 +16,10 @@ module.exports = {
             width: "1207px",
             fields: "15px"
         },
+        ipads: {
+            width: "1110px",
+            fields: "15px"
+        },
         sm: {
             width: "920px"
         },
