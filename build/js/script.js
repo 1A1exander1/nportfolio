@@ -43,12 +43,14 @@ $(".circle4").circularProgress({
 }).circularProgress('animate', 100, 2000);
 
 new SimpleBar(document.getElementById('myEl'),{
-    scrollbarMinSize: 50
+    scrollbarMinSize: 50,
+    autoHide: true 
     
 });
 new SimpleBar(document.getElementById('myEl1'),{
    
-    scrollbarMaxSize: 50
+    scrollbarMaxSize: 50,
+    autoHide: true 
 });
 
 

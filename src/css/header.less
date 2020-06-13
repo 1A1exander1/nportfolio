@@ -3,40 +3,62 @@ header{
         .row-flex();
         
         padding-top: 35px;
-        padding-left: 10px;
+        
         .logo{
             .col();
             .size(3);
-            width: 182px;
             align-self: center;
-            display: none;
+            font-size: 36px;
+            font-weight: 800;
+            font-family: @font;
+            text-align: left;
+            margin: 0;
+           
+           
             
+            a{
+                color: #100f3a;
+                text-decoration: none;
+                
+                span{
+                    color: #8583e1;
+                }
+            }
             
         }
         .nav{
             .col();
-            .size(9);
+            .size(5);
             .md-block({
                 display: none
             });
            
             display: flex;
             flex-wrap: wrap;
-            align-self: center;  
+            
                    
-            justify-content: space-evenly;  
-            background: #100f3a; 
-            width: 919px;
-            margin: 0 auto;
+          
+             margin: 0;
+            
+            .item:not(:last-child){
+                margin-right: 1px;
+            }
+            
             .item{
+                background: #100f3a;
+                transition: all 200ms;
                 
-                padding: 26px 50px;
                 
                 
                 a{
                     text-decoration: none;
-                    color: #fff;
-                    font-family: @font;
+                    display: block;
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    line-height: 59px;
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-weight: 400;
                     
                     
                 }
@@ -48,6 +70,112 @@ header{
             }
            
             
+        }
+        .button{
+            .col();
+            .size(4);
+           
+            
+            .md-block({
+                
+                position: relative;
+                right: 385px;
+                top: 340px;
+
+                width: 320px;
+              
+                
+                
+            });
+            .sm-block({
+                position: absolute;
+                left: 0px;
+                top: 400px;
+            });
+            .ipad-block({
+                position: absolute;
+                left: 40px;
+                top: 400px;
+            });
+            .xs-block({
+              
+                position: absolute;
+                left: 35px;
+                
+            });
+            .xxs-block({
+               top: 390px
+                
+              });
+              .extra-block({
+              top:380px;
+                
+                
+              });
+            
+            
+           
+            
+            .col();
+                margin-right: 0;
+                margin-left: auto;
+            .btn{
+                .md-block({
+                    margin: 0 auto;
+                    
+                });
+                display: flex;
+                margin-right: 0;
+                margin-left: auto;
+
+                                 
+                
+                
+                &__text{
+                  
+                    
+
+                    .sm-block({
+                       padding: 16px;
+                       
+                    });
+                   
+                    a{
+                        color: #fff;
+                        font-family: @font;
+                        font-size: 14px;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 60px;
+                       text-decoration: none;
+                       transition: all 200ms;
+                       background: #8583e1;
+                        padding-left: 22px;
+                        padding-right: 22px;
+
+                        .sm-block({
+                            font-size: 15px;
+                            font-weight: 600;
+                            margin-top: 2px;
+                         });
+                     
+                    }
+                    a:hover{
+                        background: #100f3a;
+                    }
+                }
+                &__arrow{
+                    background: #100f3a;
+                   
+                    i{
+                        padding: 22px 22px;
+                        color: #fff;
+                        width: 22px;
+                        
+                    }
+                }
+            }
         }
         .menu{
            background: #fff;

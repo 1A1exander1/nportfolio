@@ -41,6 +41,8 @@
                background: #100f3a;
                
             });
+            margin: 0;
+            
             .img{
                 .sm-block({
                     margin: 0;
@@ -67,16 +69,17 @@
                 });
                 width: 100%;
                 height: 474px;
-                margin-left: -15px;
+                margin: 0;
                 display: flex;
                 justify-content: center;
+                
                 .col();
                 .size-sm(6);
                 .size-ipad(6);
                 .size-xs(12);
                img{
                    
-                   margin: 0 auto;
+                   
                    height: 420px;
                    position: relative;
                    top: 54px;
@@ -94,11 +97,12 @@
                 .size-ipad(6);
                 .size-xs(12);
                 .sm-block({
-                    margin: 0;
+                    
                     position: relative;
                     left: 10px;
                     
                 });
+                
                 .ipad-block({
                     margin: 0;
                     position: relative;
@@ -116,7 +120,7 @@
                 width: 100%;
                 position: relative;
                 right: 0px;
-                height: 287px;
+                height: 184px;
                 display: flex;
                 .md-block({
                    height: 400px;
@@ -141,16 +145,22 @@
                         font-size: 24px;
                         font-family: @font;
                         text-align: center;
-                        padding-bottom: 25px;
+                        padding-right: 20px;
+                       
+                        
                        
                     }
                     
                     
-                    margin: 0 auto;
-                    align-self: center;
+                    margin-top: 40px;
                    
-                    width: 430px;
-                    height:100px;
+                    padding-left: 20px;
+                    width: 90%;
+                    height: 37%;
+                   
+                    padding-bottom: 60px;
+                    
+                   
                     
                     .information{
                         .ipad-block({
@@ -182,13 +192,16 @@
                           display: flex;
                           width: 400px;
                           flex-wrap: wrap;
+                          margin-top: 40px;
+                          
                             &__text{
                                 
                                 display: flex;
                                 font-size: 14px;
                                 font-family: @font;
                                 justify-content: center;
-                                padding-right: 20px;
+                                padding-right: 10px;
+                                
                                 line-height: 40px;
                                 flex-wrap: wrap;
                                 width: 400px;
@@ -214,13 +227,29 @@
                                     padding-left: 22px;
                                }
                             }
+                            &__text:nth-child(2){
+                                padding-right: 7px;
+
+                            }
+                            &__text:nth-child(3){
+                                padding-right: 35px;
+
+                            }
+                            &__text:nth-child(4){
+                                padding-right: 52px;
+
+                            }
                             &__network{
+                                margin: 0 auto;
+                                line-height: 60px;
                                 a{
                                     color: #7a798c;
                                 }
                                 i{
                                     padding: 0 10px;
-                                    margin: 0 auto;
+                                    
+                                    
+                                    
                                 }
                                 i:hover{
                                     color: #fff;
@@ -240,7 +269,8 @@
                 border-radius: 0;
                 width: 4px;
                 margin-left: 6px;
-                                  
+                transition: all 500ms;
+                overflow: scroll;  
                 }
              
                 
@@ -268,95 +298,7 @@
             .size-xs(12);
             
             
-            .button{
-                width: 100%;
-                
-                .md-block({
-                    
-                    position: relative;
-                    right: 385px;
-                    top: 340px;
-
-                    width: 320px;
-                  
-                    
-                    
-                });
-                .sm-block({
-                    position: absolute;
-                    left: 0px;
-                    top: 400px;
-                });
-                .ipad-block({
-                    position: absolute;
-                    left: 40px;
-                    top: 400px;
-                });
-                .xs-block({
-                  
-                    position: absolute;
-                    left: 35px;
-                    
-                });
-                .xxs-block({
-                   top: 390px
-                    
-                  });
-                  .extra-block({
-                  top:380px;
-                    
-                    
-                  });
-                
-                
-                height: 90px;
-                
-                .col();
-                
-                .btn{
-                    .md-block({
-                        margin: 0 auto;
-                        
-                    });
-                    display: flex;
-                    
-                                     
-                    margin-left: 67%;
-                    margin-right: 0;
-                    padding-top: 25px;
-                    
-                    &__text{
-                        background: #8583e1; 
-                        padding:22px;
-
-                        .sm-block({
-                           padding: 16px;
-                           
-                        });
-                       
-                        p{
-                            color: #fff;
-                            font-family: @font;
-                            font-size: 14px;
-
-                            .sm-block({
-                                font-size: 15px;
-                                font-weight: 600;
-                                margin-top: 2px;
-                             });
-                         
-                        }
-                    }
-                    &__arrow{
-                        background: #100f3a;
-                        padding: 22px 22px;
-                        i{
-                            color: #fff;
-                            width: 23px;
-                        }
-                    }
-                }
-            }
+           
            
             .heading{
                 text-align: start;
@@ -445,17 +387,66 @@
             
           
             .scrollContent{
+               
                 .port{
                     background: red;
                     height: 50px;
 
                 }
-                 .eduction{
-                    margin: 40px 20px;
-                    width: 80%;
-                     
-                    
-                 }
+                .edu{
+                    .block{
+                        display: flex;
+                        height: 150px;
+                        .icon{
+                            padding: 0 30px;
+                            display: flex;
+                            i{
+                                font-size: 67px;
+                                align-self: center;
+                                color: #7a798c;
+                            }
+                            span{
+                                font-size: 24px;
+                                width: 100px;
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #8583e1;
+                                line-height: 0.75;
+                                align-self: center;
+                            }
+                        }
+                       
+                        .eduction{
+                            align-self: flex-end;
+                            h3{
+                                font-size: 24px;
+                                font-weight: 700;
+                                color: #100f3a;
+                                font-family: @font;
+                                padding: 0;
+                                line-height: 27px;
+                               
+                               
+                            }
+                            p{
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #838293;
+                                font-family: @font;
+                                padding-top: 20px;
+                                
+                            }
+                             
+                            
+                         }
+                    }
+                    .block:nth-child(2){
+                        margin: 80px 0;
+                        .eduction{
+                            padding-left: 12px;
+                        }
+                    }
+                }
                  
                 .con{
 
@@ -576,7 +567,14 @@
                             margin-top: 10px;
                         }
                         width: 100%;
-                        
+                        .vk{
+                            display: flex;
+                            margin-top: 10px;
+                        }
+                        .ok{
+                            display: flex;
+                            margin-top: 10px;
+                        }
                       
                         
                     }
@@ -751,8 +749,9 @@
                 border-radius: 0;
                 width: 4px;
                 margin-left: 6px;
+                transition: all 500ms;
                 
-                  
+                                
                 
                
                                  
