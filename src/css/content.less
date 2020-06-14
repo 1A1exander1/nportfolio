@@ -1,10 +1,14 @@
 .content{
+    
     .sm-block({
         height: 100%;
+
     });
+   
     .middle{
         background: #f5f0f0;  
         width: 100%;
+        height: 100%;
         .sm-block({
             height: 100%;
         });
@@ -14,6 +18,8 @@
         });
         .xs-block({
             margin: 0;
+            display: block
+            
            
          });
        
@@ -35,9 +41,11 @@
                 margin: 0;
                 width: 100%
             });
+            background: #100f3a;
             .xs-block({
                
-               width: 100%;
+                width: 100%;
+                height:100%;
                background: #100f3a;
                
             });
@@ -56,16 +64,13 @@
                 });
                 .xs-block({
                    
-                    .clearfix();
-                   
+                    
+                   background-size: 100%;
                    
                     width: 100%;
                     
-                    border: 5px solid #8583e1;
-                    border-radius: 10px;
-                    margin: 0 auto;
-                    background-size: 100%;
-                    background-repeat: no-repeat;
+                    border: none;
+                    border-radius: 0;
                 });
                 width: 100%;
                 height: 474px;
@@ -76,15 +81,15 @@
                 .col();
                 .size-sm(6);
                 .size-ipad(6);
-                .size-xs(12);
+                .size-xs(13);
                img{
                    
-                   
+                  
                    height: 420px;
                    position: relative;
                    top: 54px;
                    .xs-block({
-                       top:44px;
+                       top:54px;
                    });
                    
                }
@@ -104,37 +109,38 @@
                 });
                 
                 .ipad-block({
-                    margin: 0;
-                    position: relative;
-                    left: 20px;
+                   height: 100%;
+                   
+                   min-width: 400px;
                     
                 });
                 .xs-block({
                     margin: 0;
-                    position: relative;
-                    left: 0px;
-                    width: 100%;
+                    height: 40%;
+                    width: 50%;
+                    bottom: 25px
                     
                 });
-                background: #100f3a;
+                
                 width: 100%;
                 position: relative;
                 right: 0px;
                 height: 184px;
                 display: flex;
                 .md-block({
-                   height: 400px;
-                   width: 92%
-                 });
-
-                .textskroll{
                    
-                   .md-block({
-                    overflow:  hidden;
-                    height: 400px;
-                    margin-top: 50%;
-                    
-                   });
+                   
+                 });
+               
+                .textskroll{
+                    .ipad-block({
+                        height: 100%;
+                         margin: 50px 0;
+                         position: absolute;
+                         top: 10px;
+                         right: 55px;
+                     });
+                   
                    .xs-block({
                     position: relative;
                     bottom: 100px;
@@ -147,7 +153,18 @@
                         text-align: center;
                         padding-right: 20px;
                        
-                        
+                        .ipad-block({
+                           font-size: 36px
+                         });
+                         .ipads-block({
+                            font-size: 26px;
+                            padding: 0;
+                            margin-left: 60px
+                          });
+                          .ssm-block({
+                          
+                            margin-left: 67px
+                          });
                        
                     }
                     
@@ -165,15 +182,12 @@
                     .information{
                         .ipad-block({
                             margin: 0;
-                            position: relative;
-                            left: 20px;
+                            
+                            
                             
                         });
                         .md-block({
-                          margin: 0 auto;
-                          
-                          position: relative;
-                          right:  30px;
+                        
                         }); 
                         .xs-block({
                             position: relative;
@@ -187,12 +201,22 @@
                                 
                               }); 
                                
-                              
+                              .ipad-block({
+                                margin: 30px 22px;
+                                
+                                 
+                             });  
+                             .ipads-block({
+                                margin: 30px 40px;
+                              });  
+                              .xs-block({
+                                margin: 30px 15px; 
+                              });
 
                           display: flex;
                           width: 400px;
                           flex-wrap: wrap;
-                          margin-top: 40px;
+                          margin-top: 20px;
                           
                             &__text{
                                 
@@ -205,7 +229,13 @@
                                 line-height: 40px;
                                 flex-wrap: wrap;
                                 width: 400px;
-                              
+                                .ipad-block({
+                                   font-size: 18px
+                                 });  
+                                 .ipads-block({
+                                    font-size: 18px;
+                                   
+                                  });  
                                
                                .icon{
                                     i{
@@ -229,14 +259,29 @@
                             }
                             &__text:nth-child(2){
                                 padding-right: 7px;
+                                .ipad-block({
+                                    padding-right: 3px;
+                                   
+                                     
+                                 });  
 
                             }
                             &__text:nth-child(3){
                                 padding-right: 35px;
+                                .ipad-block({
+                                    padding-right: 30px;
+                                    
+                                     
+                                 }); 
 
                             }
                             &__text:nth-child(4){
                                 padding-right: 52px;
+                                .ipad-block({
+                                    padding-right: 45px;
+                                    
+                                     
+                                 }); 
 
                             }
                             &__network{
@@ -284,13 +329,23 @@
             }
         }
         .section{
-            
-            height: 500px;
+          
+            width: 100%;
             .sm-block({
-               height: 700px; 
-               padding: 5px ;      
+               height: 45%; 
+                    
             });
-            
+            .xs-block({
+                height: 52%;
+                margin: 0;
+                position: relative;
+                bottom: 49px;
+                
+                width: 100% !important;
+
+                background: #f5f0f0;
+                   
+             });
             .col();
             .size(8);
             .size-sm(12);
@@ -305,15 +360,36 @@
                 font-family: @font;
                 margin-left: 65px;
                 margin-top: 60px;
-                
                 height: 170px;
+                .md-block({
+                    
+                    margin-left: 60px;  
+                });
+                .xxs-block({
+                   
+                    margin: 0 auto
+                     
+                 });
+                 .sm-block({
+                   
+                    margin: 0
+                    
+                });
+                .xs-block({
+                   
+                   position: relative;
+                   top: 20px;
+                    
+                });
+                 
                h4{
                 font-size: 30px;
                 font-weight: 500;
                 color: #7a798c;
                 line-height: 0.75;
+              
                 .sm-block({
-                    
+                    font-size: 20px;
                     line-height: 1.35;
                     text-align: center;
                     margin-top: 50px;
@@ -326,28 +402,24 @@
                     margin-top: 25px;
                     
                 });
-                .xxs-block({
-                   
-                    margin-top: 80px;
-                    
-                });
-                
+               
                 
                }
                h2{
-                font-size: 65px;
+                font-size: 60px;
                 font-weight: 800;
                 color: #100f3a;
                 line-height: 0.75;
                 margin-top: 45px;
                 .md-block({
-                    font-size: 75px;
+                    font-size: 55px;
                     line-height: 0.95;
+                    
                     
                 });
                 .sm-block({
-                    font-size: 60px;
-                    line-height: 1.35;
+                    font-size: 40px;
+                    line-height: 0.35;
                     text-align: center;
                     margin-top: 30px;
                     
@@ -359,9 +431,16 @@
                     margin-top: 40px;
                     
                 });
-                .xxs-block({
+                .xs-block({
                     font-size: 50px;
-                    margin-top: 60px;
+                    margin-top: 50px;
+                    padding: 0 20px;
+                    
+                });
+                .xxs-block({
+                    font-size: 45px;
+                    margin-top: 20px;
+                    line-height: 0.85;
                     
                 });
                }
@@ -587,19 +666,21 @@
               
                 .md-block({
                   
-                    width: 90%;
+                    width: 85%;
                     margin: 0 auto;
                     position: relative;
                     top: 18%;
-                    height: 92%;
+                    height: 60%;
+                    
 
                     
                 });
                 .sm-block({
                     position: relative;
-                    top: 130px;
+                    top: -60px;
                    
-                    height: 330px;
+                    height: 130px;
+
                 });
                 .ipad-block({
                    
@@ -609,9 +690,15 @@
                     height: 250px;
                 });
                 .xs-block({
-                    height: 280px;
+                    height: 200px;
+                    position: relative;
+                    top: 00;
+                    font-size: 18px;
+                   
                     
                 });
+                
+               
                
                 width: 90%;
                 height:370px;
@@ -642,10 +729,7 @@
                     padding-left: 2px;
                     width: 83%;
                     
-                    .md-block({
-                        
-                     margin: 0 auto;
-                    });  
+                    
                    
                 }
                 .pr{

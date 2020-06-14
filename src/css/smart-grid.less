@@ -1,15 +1,17 @@
 @columns: 12;
 @atom: (100% / @columns);
 
-@break_md: 1271px;
+@break_md: 1371px;
 @break_ipad: 1207px;
 @break_ipads: 1110px;
 @break_sm: 920px;
 @break_ssm: 797px;
 @break_xs: 768px;
-@break_xxs: 576px;
-@break_xxss: 414px;
-@break_extra: 375px;
+@break_xxs: 720px;
+@break_xxss: 626px;
+@break_extra: 586px;
+@break_extram: 542px;
+@break_extral: 487px;
 
 @offset: 30px;
 @offset_md: @offset;
@@ -21,6 +23,8 @@
 @offset_xxs: @offset;
 @offset_xxss: @offset;
 @offset_extra: @offset;
+@offset_extram: @offset;
+@offset_extral: @offset;
 
 @offset_one_side: (@offset / 2);
 @offset_md_one_side: (@offset_md / 2);
@@ -32,6 +36,8 @@
 @offset_xxs_one_side: (@offset_xxs / 2);
 @offset_xxss_one_side: (@offset_xxss / 2);
 @offset_extra_one_side: (@offset_extra / 2);
+@offset_extram_one_side: (@offset_extram / 2);
+@offset_extral_one_side: (@offset_extral / 2);
 
 @fields: 30px;
 @fields_md: 15px;
@@ -69,7 +75,7 @@
 }
 
 .wrapper(){
-    max-width: 1521px;
+    max-width: 1500px;
     margin: 0 auto;
     .wrapper-full();
 }
@@ -157,6 +163,16 @@
 .size-extra(@n){
     @val: 100% / @columns * @n;
     .extra(width, ~"calc(@{val} - @{offset_extra})");
+}
+
+.size-extram(@n){
+    @val: 100% / @columns * @n;
+    .extram(width, ~"calc(@{val} - @{offset_extram})");
+}
+
+.size-extral(@n){
+    @val: 100% / @columns * @n;
+    .extral(width, ~"calc(@{val} - @{offset_extral})");
 }
 
 .shift(@n){
@@ -479,6 +495,70 @@
     .extra(padding-right, ~"calc(@{val} + @{offset_extra_one_side})");
 }
 
+.shift-extram(@n){
+    @val: 100% / @columns * @n;
+    .extram(margin-left, ~"calc(@{val} + @{offset_extram_one_side})");
+    .extram(margin-right, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extram-left(@n){
+    @val: 100% / @columns * @n;
+    .extram(margin-left, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extram-right(@n){
+    @val: 100% / @columns * @n;
+    .extram(margin-right, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extram-padding(@n){
+    @val: 100% / @columns * @n;
+    .extram(padding-left, ~"calc(@{val} + @{offset_extram_one_side})");
+    .extram(padding-right, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extram-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .extram(padding-left, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extram-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .extram(padding-right, ~"calc(@{val} + @{offset_extram_one_side})");
+}
+
+.shift-extral(@n){
+    @val: 100% / @columns * @n;
+    .extral(margin-left, ~"calc(@{val} + @{offset_extral_one_side})");
+    .extral(margin-right, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
+.shift-extral-left(@n){
+    @val: 100% / @columns * @n;
+    .extral(margin-left, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
+.shift-extral-right(@n){
+    @val: 100% / @columns * @n;
+    .extral(margin-right, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
+.shift-extral-padding(@n){
+    @val: 100% / @columns * @n;
+    .extral(padding-left, ~"calc(@{val} + @{offset_extral_one_side})");
+    .extral(padding-right, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
+.shift-extral-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .extral(padding-left, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
+.shift-extral-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .extral(padding-right, ~"calc(@{val} + @{offset_extral_one_side})");
+}
+
 .md(@name, @value){
     @media screen and (max-width: @break_md){
         @{name}: @value;
@@ -583,6 +663,30 @@
 
 .extra-block(@content){
     @media screen and (max-width: @break_extra){
+        @content();
+    }
+}
+
+.extram(@name, @value){
+    @media screen and (max-width: @break_extram){
+        @{name}: @value;
+    }
+}
+
+.extram-block(@content){
+    @media screen and (max-width: @break_extram){
+        @content();
+    }
+}
+
+.extral(@name, @value){
+    @media screen and (max-width: @break_extral){
+        @{name}: @value;
+    }
+}
+
+.extral-block(@content){
+    @media screen and (max-width: @break_extral){
         @content();
     }
 }

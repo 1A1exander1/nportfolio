@@ -3,13 +3,13 @@ module.exports = {
 	offset: "30px",
 	
 	container: {
-        maxWidth: "1521px",
-        minWidth: "500px",  
+        maxWidth: "1500px",
+        minWidth: "700px",  
         fields: "30px"
     },
 	breakPoints: {
 		md: {
-            width: "1271px",
+            width: "1371px",
             fields: "15px"
         },
         ipad: {
@@ -30,15 +30,24 @@ module.exports = {
             width: "768px"
         },
         xxs: {
-            width: "576px"
+            width: "720px"
            
         },
         xxss: {
-            width: "414px",
+            width: "626px",
            
         },
         extra: {
-            width: "375px",
+            width: "586px",
+           
+        },
+        extram: {
+            width: "542px",
+           
+        },
+
+        extral: {
+            width: "487px",
            
         }
 

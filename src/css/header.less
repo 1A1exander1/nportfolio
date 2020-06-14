@@ -7,6 +7,10 @@ header{
         .logo{
             .col();
             .size(3);
+            .size-md(3);
+            .xs-block({
+              margin-left: 12px
+            });
             align-self: center;
             font-size: 36px;
             font-weight: 800;
@@ -74,16 +78,22 @@ header{
             
         }
         .button{
+            display: flex;
+               
+            width: 50px;
+            min-width: 50px;
+            justify-content: end;
             .col();
             .size(4);
            
             
             .md-block({
-                
-                position: relative;
-                right: 385px;
-                top: 340px;
+                min-width: 100px;
+                position: absolute;
+                right: 73%;
 
+                top: 28em;
+                z-index: 1;
                 width: 320px;
               
                 
@@ -91,34 +101,50 @@ header{
             });
             .sm-block({
                 position: absolute;
-                left: 0px;
-                top: 400px;
+                top: 57%;
+               right:  60%;
+                
+               
+            });
+            .ssm-block({
+                
+               right:  57%;
+                
+               
             });
             .ipad-block({
                 position: absolute;
-                left: 40px;
-                top: 400px;
+                right:  70%;
+                top: 58%;
+            });
+            .ipads-block({
+                position: absolute;
+                right:  65%;
+                
             });
             .xs-block({
               
                 position: absolute;
-                left: 35px;
+                right:  52%;
                 
             });
             .xxs-block({
-               top: 390px
+                position: relative;
+                right:  380px;
+                top: 420px;
                 
               });
               .extra-block({
-              top:380px;
+                position: relative;
+                right:  360px;
                 
                 
               });
-            
+          
             
            
             
-            .col();
+           
                 margin-right: 0;
                 margin-left: auto;
             .btn{
@@ -126,9 +152,12 @@ header{
                     margin: 0 auto;
                     
                 });
+                
                 display: flex;
-                margin-right: 0;
-                margin-left: auto;
+               
+               margin-left: auto;
+               margin-right: 30px;
+                
 
                                  
                 
@@ -138,7 +167,7 @@ header{
                     
 
                     .sm-block({
-                       padding: 16px;
+                        padding: 0;
                        
                     });
                    
@@ -156,11 +185,7 @@ header{
                         padding-left: 22px;
                         padding-right: 22px;
 
-                        .sm-block({
-                            font-size: 15px;
-                            font-weight: 600;
-                            margin-top: 2px;
-                         });
+                       
                      
                     }
                     a:hover{
@@ -180,29 +205,29 @@ header{
             }
         }
         .menu{
-           background: #100f3a;
-           max-width: 55px;
-           min-width: 55px;
+          
+           max-width: 78px;
+           min-width: 78px;
           display: none;
+          .col();
+          .size-md(9);
           .md-block({
               display: block;
               position: absolute;
-              left: 80%;
-              top: -20px;
-              width: 250px;
+              top: 20px;
+              left: 93%;
               z-index: 1;
-              margin-left: -20px; 
+             
               
             
             
           });
           .sm-block({
-            margin-left: -90px; 
-            top: -20px;
+           left: 92%;
+          
           });
           .ssm-block({
-            margin-left: -112px; 
-            top: -20px;
+            left: 91%;
           });
           
           .ipad-block({
@@ -222,11 +247,13 @@ header{
                padding-right: 20px;
               text-align: right;
                z-index: 2;
+               
            
                 .hover{
                     display: none;
-                    position: relative;
-                    top: 10px;
+                    position: absolute;
+                    top: 30px;
+                    right: 12px;
                     margin-right: 3px;
                     font-size: 16px;
                     text-transform: uppercase;
@@ -235,7 +262,8 @@ header{
                     font-family: @font;
                     background: #fff;
                     
-                    height: 300px;
+                    width: 200px;
+                    height: 170px;
                     transition: 5s;
                     
                     padding: 0;
@@ -249,12 +277,17 @@ header{
                     });
                     .md-block({
                         display: block;
-                        
+                        padding: 10px 0;
                         text-align: right;
                         
 
                         a{
+                            color: #100f3a;
                             text-decoration: none;
+                        }
+                        a:hover{
+                            color: #8583e1;
+                           
                         }
                         
                       
